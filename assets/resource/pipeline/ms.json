@@ -1,0 +1,8 @@
+{
+    "点击冒险": {
+        "recognition": "OCR",
+        "expected": "冒险",
+        "action": "Click",
+        "next": []
+    }
+}

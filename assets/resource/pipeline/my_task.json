@@ -1,5 +1,184 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {}
+    "alwaysFalse": {
+        "recognition": "OCR",
+        "expected": "alwaysFalse",
+        "roi": [
+            1,
+            1,
+            1,
+            1
+        ]
+    },
+    "房主循环": {
+        "next": [
+            "alwaysFalse"
+        ],
+        "interrupt": [
+            "点击shortcut",
+            "点击出击",
+            "点击开始",
+            "弹珠"
+        ]
+    },
+    "组队循环": {
+        "next": [
+            "alwaysFalse"
+        ],
+        "interrupt": [
+            "参加多人游玩",
+            "点击出击",
+            "点击开始",
+            "弹珠"
+        ]
+    },
+    "点击shortcut": {
+        "recognition": "OCR",
+        "expected": "SHORT CUT",
+        "action": "Click",
+        "next": [
+            "点击出击"
+        ]
+    },
+    "点击出击": {
+        "recognition": "OCR",
+        "expected": "出擎",
+        "action": "Click",
+        "next": [
+            "点击开始",
+            "弹珠"
+        ]
+    },
+    "点击开始": {
+        "recognition": "OCR",
+        "expected": "開始",
+        "action": "Click",
+        "next": [
+            "弹珠",
+            "点击开始确认",
+            "点击开始"
+        ]
+    },
+    "点击开始确认": {
+        "recognition": "OCR",
+        "expected": "是",
+        "action": "Swipe",
+        "next": [
+            "弹珠",
+            "点击开始"
+        ]
+    },
+    "弹珠": {
+        "recognition": "OCR",
+        "expected": "BATTLE",
+        "action": "Swipe",
+        "begin_offset": [
+            300,
+            -300,
+            10,
+            10
+        ],
+        "end_offset": [
+            100,
+            -400,
+            10,
+            10
+        ],
+        "next": [
+            "通关确认",
+            "弹珠"
+        ]
+    },
+    "通关确认": {
+        "recognition": "OCR",
+        "expected": "勝利",
+        "next": [
+            "点击通关OK"
+        ]
+    },
+    "奖励": {
+        "recognition": "OCR",
+        "expected": "過關",
+        "action": "Swipe",
+        "next": [
+            "点击奖励OK",
+            "奖励"
+        ]
+    },
+    "end": {},
+    "点击通关OK": {
+        "recognition": "OCR",
+        "expected": "OK",
+        "action": "Swipe",
+        "next": [
+            "奖励",
+            "点击通关OK"
+        ]
+    },
+    "点击奖励OK": {
+        "recognition": "OCR",
+        "expected": "OK",
+        "action": "Swipe",
+        "pre_delay": 300,
+        "next": []
+    },
+    "参加多人游玩": {
+        "recognition": "OCR",
+        "expected": "参加多人游玩",
+        "action": "Click",
+        "next": [
+            "查找room"
+        ]
+    },
+    "查找room": {
+        "next": [
+            "有room",
+            "找不到募集"
+        ]
+    },
+    "有room": {
+        "recognition": "OCR",
+        "expected": "ROOM",
+        "next": [
+            "进room"
+        ]
+    },
+    "进room": {
+        "recognition": "OCR",
+        "expected": "ROOM",
+        "action": "Click",
+        "pre_wait_freezes": 800,
+        "post_wait_freezes": 1000,
+        "target_offset": [
+            100,
+            80,
+            10,
+            10
+        ],
+        "next": [
+            "点击出击",
+            "没有募集"
+        ]
+    },
+    "没有募集": {
+        "recognition": "OCR",
+        "expected": "没有募集",
+        "next": [
+            "重新搜寻"
+        ]
+    },
+    "找不到募集": {
+        "recognition": "OCR",
+        "expected": "找不到募集",
+        "next": [
+            "重新搜寻"
+        ]
+    },
+    "重新搜寻": {
+        "recognition": "OCR",
+        "expected": "重新搜",
+        "action": "Swipe",
+        "next": [
+            "查找room"
+        ]
+    }
 }
