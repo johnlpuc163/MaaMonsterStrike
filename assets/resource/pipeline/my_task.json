@@ -118,8 +118,10 @@
         "recognition": "OCR",
         "expected": "OK",
         "action": "Swipe",
-        "pre_delay": 300,
-        "next": []
+        "next": [
+            "点击奖励OK",
+            "在主界面"
+        ]
     },
     "参加多人游玩": {
         "recognition": "OCR",
@@ -134,6 +136,11 @@
             "有room",
             "找不到募集"
         ]
+    },
+    "在主界面": {
+        "recognition": "OCR",
+        "expected": "参加多人游玩",
+        "next": []
     },
     "有room": {
         "recognition": "OCR",
