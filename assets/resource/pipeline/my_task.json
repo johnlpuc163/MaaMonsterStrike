@@ -95,13 +95,13 @@
             "点击通关OK"
         ]
     },
-    "奖励": {
+    "奖励页面": {
         "recognition": "OCR",
-        "expected": "過關",
+        "expected": "運氣",
         "action": "Swipe",
         "next": [
             "点击奖励OK",
-            "奖励"
+            "奖励页面"
         ]
     },
     "end": {},
@@ -110,7 +110,7 @@
         "expected": "OK",
         "action": "Swipe",
         "next": [
-            "奖励",
+            "奖励页面",
             "点击通关OK"
         ]
     },
