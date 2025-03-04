@@ -78,8 +78,8 @@
             10
         ],
         "end_offset": [
-            100,
-            -400,
+            50,
+            -370,
             10,
             10
         ],
@@ -104,11 +104,25 @@
             "奖励页面"
         ]
     },
+    "test": {
+        "recognition": "OCR",
+        "expected": "OK",
+        "action": "Click",
+        "next": []
+    },
     "end": {},
     "点击通关OK": {
         "recognition": "OCR",
         "expected": "OK",
+        "order_by": "Vertical",
+        "index": 0,
         "action": "Swipe",
+        "target": [
+            334,
+            786,
+            51,
+            32
+        ],
         "next": [
             "奖励页面",
             "点击通关OK"
@@ -117,7 +131,7 @@
     "点击奖励OK": {
         "recognition": "OCR",
         "expected": "OK",
-        "action": "Swipe",
+        "action": "Click",
         "next": [
             "点击奖励OK",
             "在主界面"
