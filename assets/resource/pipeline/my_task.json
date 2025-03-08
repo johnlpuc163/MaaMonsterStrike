@@ -20,12 +20,28 @@
             "弹珠"
         ]
     },
+    "房主一次": {
+        "next": [
+            "点击shortcut",
+            "点击出击",
+            "点击开始",
+            "弹珠"
+        ]
+    },
     "组队循环": {
         "next": [
             "alwaysFalse"
         ],
         "interrupt": [
             "参加多人游玩",
+            "点击出击",
+            "点击开始",
+            "弹珠"
+        ]
+    },
+    "组队一次": {
+        "next": [
+            "点击shortcut",
             "点击出击",
             "点击开始",
             "弹珠"
@@ -51,7 +67,7 @@
     "点击开始": {
         "recognition": "OCR",
         "expected": "開始",
-        "action": "Click",
+        "action": "Swipe",
         "next": [
             "弹珠",
             "点击开始确认",
@@ -79,7 +95,7 @@
         ],
         "end_offset": [
             50,
-            -370,
+            -400,
             10,
             10
         ],
@@ -106,7 +122,7 @@
     },
     "test": {
         "recognition": "OCR",
-        "expected": "OK",
+        "expected": "一次",
         "action": "Click",
         "next": []
     },
