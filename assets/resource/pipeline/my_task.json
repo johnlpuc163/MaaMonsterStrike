@@ -56,8 +56,8 @@
         ]
     },
     "点击出击": {
-        "recognition": "OCR",
-        "expected": "出擎",
+        "recognition": "TemplateMatch",
+        "template": "chuji.png",
         "action": "Click",
         "next": [
             "点击开始",
@@ -86,6 +86,67 @@
     "弹珠": {
         "recognition": "OCR",
         "expected": "BATTLE",
+        "pre_delay": 2000,
+        "next": [
+            "通关确认",
+            "有技能",
+            "拉动弹珠"
+        ]
+    },
+    "有技能": {
+        "recognition": "TemplateMatch",
+        "template": "test1.png",
+        "next": [
+            "放技能1",
+            "拉动弹珠"
+        ]
+    },
+    "放技能1": {
+        "recognition": "TemplateMatch",
+        "template": "test1.png",
+        "order_by": "Horizontal",
+        "index": 0,
+        "action": "Click",
+        "next": [
+            "放技能2",
+            "拉动弹珠"
+        ]
+    },
+    "放技能2": {
+        "recognition": "TemplateMatch",
+        "template": "test1.png",
+        "order_by": "Horizontal",
+        "index": 1,
+        "action": "Click",
+        "next": [
+            "放技能3",
+            "拉动弹珠"
+        ]
+    },
+    "放技能3": {
+        "recognition": "TemplateMatch",
+        "template": "test1.png",
+        "order_by": "Horizontal",
+        "index": 2,
+        "action": "Click",
+        "next": [
+            "放技能4",
+            "拉动弹珠"
+        ]
+    },
+    "放技能4": {
+        "recognition": "TemplateMatch",
+        "template": "test1.png",
+        "order_by": "Horizontal",
+        "index": 3,
+        "action": "Click",
+        "next": [
+            "拉动弹珠"
+        ]
+    },
+    "拉动弹珠": {
+        "recognition": "OCR",
+        "expected": "BATTLE",
         "action": "Swipe",
         "begin_offset": [
             300,
@@ -100,7 +161,6 @@
             10
         ],
         "next": [
-            "通关确认",
             "弹珠"
         ]
     },
