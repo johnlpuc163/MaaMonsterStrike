@@ -207,6 +207,8 @@
     "点击奖励OK": {
         "recognition": "OCR",
         "expected": "OK",
+        "order_by": "Vertical",
+        "index": -1,
         "action": "Click",
         "next": [
             "点击奖励OK",
