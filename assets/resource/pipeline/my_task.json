@@ -174,7 +174,7 @@
     },
     "奖励页面": {
         "recognition": "OCR",
-        "expected": "運氣",
+        "expected": "特别",
         "action": "Swipe",
         "next": [
             "点击奖励OK",
